@@ -1,4 +1,5 @@
 import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
+import { isMetamaskInstalled } from "../../utils/Metamask";
 import { HeaderProps } from "./HeaderProps";
 import { Selector } from "./Selector";
 
@@ -13,7 +14,7 @@ export const Header = (props: HeaderProps) => {
           { 
             props.auth
               ? <Selector id={props.auth.id} evmAddress={props.auth.evmAddress} /> 
-              : <Button color="inherit">Login</Button>
+              : isMetamaskInstalled() ? <Button color="inherit">Login</Button> : <p>Please, install Metamask</p>
           }
         </Toolbar>
       </AppBar>
