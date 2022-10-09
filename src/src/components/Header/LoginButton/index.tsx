@@ -1,8 +1,8 @@
-import { Alert, Button } from "@mui/material"
+import { Button } from "@mui/material"
 import { isMetamaskInstalled } from "../../../utils/Metamask"
 
 export const LoginButton = () => {
   return isMetamaskInstalled()
-    ? <Button color="inherit">Login</Button> 
-    : <Alert severity="warning">Please, install Metamask</Alert>
+    ? <Button color="inherit">Login</Button>
+    : <Button color="inherit" disabled>Login</Button>
 }
