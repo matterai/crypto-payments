@@ -2,7 +2,7 @@ import { UserProps } from "../UserProps";
 
 const Profile = (props: UserProps) => {
   return (
-    <p>{ formatEvmAddress(props.evmAddress, 5, 39) }</p>
+    <p>{ formatEvmAddress(props.evmAddress, 5, 38) }</p>
   );
 }
 
