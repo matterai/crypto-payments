@@ -1,6 +1,6 @@
 import { UserProps } from "../UserProps";
 
-export const Selector = (props: UserProps) => {
+const Selector = (props: UserProps) => {
   return (
     <p>{ formatEvmAddress(props.evmAddress, 5, 39) }</p>
   );
@@ -16,3 +16,5 @@ const formatEvmAddress = (
       replacement + 
       evmAddress.substring(to, evmAddress.length);
 }
+
+export default Selector;

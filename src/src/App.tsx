@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return(
       <Container maxWidth="sm">
-        <Header auth={null} />
+        <Header />
         <Announcements />
       </Container>
     );
