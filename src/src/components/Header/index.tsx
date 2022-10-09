@@ -2,7 +2,7 @@ import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import { useState } from "react";
 import { HeaderProps } from "./HeaderProps";
 import LoginButton from "./LoginButton";
-import Selector from "./Selector";
+import Profile from "./Profile";
 
 export const Header = () => {
   const [props, setProps] = useState<HeaderProps>({ auth: null });
@@ -25,7 +25,7 @@ export const Header = () => {
           </Typography>
           { 
             props.auth
-              ? <Selector id={props.auth.id} evmAddress={props.auth.evmAddress} /> 
+              ? <Profile id={props.auth.id} evmAddress={props.auth.evmAddress} /> 
               : <LoginButton onLogin={onLogin} />
           }
         </Toolbar>
