@@ -1,13 +1,6 @@
 import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
-
-type HeaderProps = {
-  user: UserProps | null;
-}
-
-type UserProps = {
-  id: string;
-  evmAddress: string;
-}
+import { HeaderProps } from "./HeaderProps";
+import { Selector } from "./Selector";
 
 export const Header = (props: HeaderProps) => {
   const render = (
@@ -17,7 +10,11 @@ export const Header = (props: HeaderProps) => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Crypto Market
           </Typography>
-          <Button color="inherit">Login</Button>
+          { 
+            props.auth
+              ? <Selector id={props.auth.id} evmAddress={props.auth.evmAddress} /> 
+              : <Button color="inherit">Login</Button>
+          }
         </Toolbar>
       </AppBar>
     </Box>

@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return(
       <Container maxWidth="sm">
-        <Header user={null} />
+        <Header auth={null} />
       </Container>
     );
   }
