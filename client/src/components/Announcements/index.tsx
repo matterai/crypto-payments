@@ -42,7 +42,7 @@ export const Announcements = () => {
           : null 
       }
       { 
-        isMetamaskInstalled() && chainId !== 137 
+        isMetamaskInstalled() && chainId !== 0 && chainId !== 137
           ? <Alert severity="warning">Please, switch your wallet to <Link href="#" onClick={onPolygonLinkClick}>Polygon</Link>.</Alert> 
           : null 
       }
