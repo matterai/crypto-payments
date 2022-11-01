@@ -1,8 +1,9 @@
 import { Component } from 'react';
 import './App.css';
-import { Container } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import { Header } from './components/Header';
 import { Announcements } from './components/Announcements';
+import Product from './components/Product';
 
 
 class App extends Component {
@@ -11,6 +12,9 @@ class App extends Component {
       <Container >
         <Header />
         <Announcements />
+        <Box>
+          <Product></Product>
+        </Box>
       </Container>
     );
   }
