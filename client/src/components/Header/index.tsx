@@ -1,4 +1,4 @@
-import { AppBar, Box, Toolbar, Typography } from "@mui/material";
+import { AppBar, Toolbar, Typography } from "@mui/material";
 import { useState } from "react";
 import { HeaderProps } from "./HeaderProps";
 import LoginButton from "./LoginButton";
@@ -17,20 +17,18 @@ export const Header = () => {
   }
 
   const render = (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Crypto Market
-          </Typography>
-          { 
-            props.auth
-              ? <Profile id={props.auth.id} evmAddress={props.auth.evmAddress} /> 
-              : <LoginButton onLogin={onLogin} />
-          }
-        </Toolbar>
-      </AppBar>
-    </Box>
+    <AppBar position="sticky">
+      <Toolbar>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          Crypto Market
+        </Typography>
+        { 
+          props.auth
+            ? <Profile id={props.auth.id} evmAddress={props.auth.evmAddress} /> 
+            : <LoginButton onLogin={onLogin} />
+        }
+      </Toolbar>
+    </AppBar>
   );
 
   return render;

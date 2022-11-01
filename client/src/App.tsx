@@ -8,7 +8,7 @@ import { Announcements } from './components/Announcements';
 class App extends Component {
   render() {
     return(
-      <Container maxWidth="sm">
+      <Container >
         <Header />
         <Announcements />
       </Container>
